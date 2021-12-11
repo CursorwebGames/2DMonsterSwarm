@@ -7,7 +7,7 @@ Become rich!
 Arrow Keys or WASD to move, click to attack!
 
 ## Spec
-**Unity Version: ** 2020.3.6f1
+**Unity Version**: 2020.3.6f1
 
 ## Monsters
 - Slime
