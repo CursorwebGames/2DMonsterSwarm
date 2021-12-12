@@ -22,3 +22,9 @@ You get gold for killing people, but you can also get some rare drops:
 - Axe
 - Dagger
 - Spear
+
+## Combat
+Depending on the player you are facing, there are 4 directions
+- left right
+- up down
+for each of these directions, 90degrees respectively of the player gets hit!
