@@ -2,9 +2,15 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // animations
     public Animator animator;
+
+    // positions
     public Rigidbody2D rb;
+
+    // config
     public float speed;
+    public bool back = false;
 
     private bool right = true;
     private Vector2 movement;
@@ -19,10 +25,12 @@ public class PlayerMovement : MonoBehaviour
         // this way if the user doesn't do anything, nothing changes
         if (y > 0)
         {
+            back = true;
             animator.SetBool("FacingBack", true);
         }
         else if (y < 0)
         {
+            back = false;
             animator.SetBool("FacingBack", false);
         }
 
@@ -43,6 +51,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
+        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
     }
 }
