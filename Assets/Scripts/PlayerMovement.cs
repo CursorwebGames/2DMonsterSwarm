@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     // config
     public float speed;
     public bool back = false;
+    public float scaleOffset;
 
     // weapon
     public WeaponManager weapon;
@@ -46,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
             right = false;
         }
 
-        transform.localScale = new Vector3(right ? 1 : -1, 1, 1);
+        transform.localScale = new Vector3(right ? 1 : -1, 1, 1) * scaleOffset;
 
         if ((x < 0.5 && y < 0.5) && (x > -0.5 && y > -0.5)) animator.SetLayerWeight(1, 0);
         else animator.SetLayerWeight(1, 1);
