@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public bool back = false;
 
+    // weapon
+    public WeaponManager weapon;
+
     private bool right = true;
     private Vector2 movement;
 
@@ -47,6 +50,13 @@ public class PlayerMovement : MonoBehaviour
 
         if ((x < 0.5 && y < 0.5) && (x > -0.5 && y > -0.5)) animator.SetLayerWeight(1, 0);
         else animator.SetLayerWeight(1, 1);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (back) animator.Play("PlayerAttackingBack");
+            else animator.Play("PlayerAttacking");
+            weapon.Attack();
+        }
     }
 
     private void FixedUpdate()

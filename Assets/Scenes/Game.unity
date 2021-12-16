@@ -334,6 +334,7 @@ GameObject:
   - component: {fileID: 1561091262}
   - component: {fileID: 1561091263}
   - component: {fileID: 1561091264}
+  - component: {fileID: 1561091265}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -420,6 +421,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 2029949733}
   offset: {x: 1.45, y: -0.2, z: 0}
+  animator: {fileID: 1561091265}
+--- !u!95 &1561091265
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561091261}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5038989669a18e8439706dc59575e529, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1778805813
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,6 +593,7 @@ MonoBehaviour:
   rb: {fileID: 2029949734}
   speed: 2.5
   back: 0
+  weapon: {fileID: 1561091264}
 --- !u!50 &2029949734
 Rigidbody2D:
   serializedVersion: 4
